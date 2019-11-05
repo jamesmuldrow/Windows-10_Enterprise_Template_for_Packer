@@ -20,12 +20,33 @@ This repo currently tested to support the following Windows Editions:
 
 1. Clone and change directory into this repo
 2. Copy .variables.example.json to variables.json
-3. Place downloaded iso file in ./iso folder
-4. Run the following command:
+3. Modify lines 88, 89 & 109, 110 in the autounnattend.xml file.
+    - 88, 89 & 109,110 both look like this:  
+````xml
+<Value>TQBhAHIAaQBuAGUAcwAxAFAAYQBzAHMAdwBvAHIAZAA=</Value>
+<PlainText>false</PlainText>
+
 ````
+Change them to
+````xml
+<Value>Your Plain Text Password Goes Here</Value>
+<PlainText>true</PlainText>
+````
+
+4. Modify the "ssh_password" field in variables.json to reflect user password we modified in step 3.
+5. Place downloaded iso file in ./iso folder
+6. Run the following command:
+````bash
 packer build -var-file=variables.json windows10.json
 ````
 
+Once complete, your resulting VM will be stored in the ./output-vmware-iso directory
+
+Successful completion will look like this: 
+````output
+==> Builds finished. The artifacts of successful builds are:
+--> vmware-iso: VM files in directory: output-vmware-iso
+````
 ### Contributing
 
 Pull requests welcomed.
