@@ -3,6 +3,7 @@
     "ssh_username": "Admin",
     "_comment":"This user password is defined in your autounattend.xml file",
     "ssh_password": "YOUR_PASSWORD_GOES_HERE",
+    "ssh_wait_timeout": "2h",
     "iso_name": "en_windows_10_business_editions_version_1909_x64_dvd_ada535d0.iso",
     "iso_checksum":"798A68A8860C02D379A50D244DBA6CEFB32A90E966B3CAA380C52B23E00F5E7F",
     "guest_os_type": "windows9-64",
