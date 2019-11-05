@@ -1,0 +1,31 @@
+{
+    "builders": [{
+        "type": "vmware-iso",
+        "vm_name": "{{user `vm_name`}}",
+        "guest_os_type": "{{user `guest_os_type`}}",
+        "ssh_username": "{{user `ssh_username`}}",
+        "ssh_password": "{{user `ssh_password`}}",
+        "ssh_wait_timeout": "{{user `ssh_wait_timeout`}}",
+        "version":"{{user `version`}}",
+        "headless": "{{user `headless`}}",
+        "boot_wait": "{{user `boot_wait`}}",
+        "tools_upload_flavor": "windows",
+        "iso_url": "iso/{{user `iso_name`}}",
+        "iso_checksum": "{{user `iso_checksum`}}",
+        "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"AutoInstall Shutdown\"",
+        "disk_size": "{{user `disk_size`}}",
+        "vnc_port_min": 5900,
+        "vnc_port_max": 5980,
+        "cpus": "{{user `cpus`}}",
+        "memory": "{{user `memory`}}",
+        "floppy_files": [
+           "./autounattend.xml",
+           "./scripts/"
+        ],
+        "vmx_data": {
+            "RemoteDisplay.vnc.enabled": "false",
+            "RemoteDisplay.vnc.port": "5900",
+            "scsi0.virtualDev": "lsisas1068"
+        }
+    }]
+}
