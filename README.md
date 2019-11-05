@@ -21,7 +21,7 @@ This repo currently tested to support the following Windows Editions:
 1. Clone and change directory into this repo
 ````bash
 git clone https://github.com/jamesmuldrow/Windows-10_Enterprise_Template_for_Packer.git
-cd Windows-10_Enterprise_Template_for_Packer.git
+cd Windows-10_Enterprise_Template_for_Packer
 ````
 2. Copy .variables.example.json to variables.json
 ````bash
