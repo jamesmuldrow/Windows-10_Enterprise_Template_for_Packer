@@ -8,13 +8,15 @@ This repository contains Windows 10 Enterprise Template that can be used to crea
 
 This repo currently tested to support the following Windows Editions:
 
-- en_windows_10_business_editions_version_1909_x64_dvd_ada535d0
+- Windows 10 business editions version 1809 x64
+- or greater 
 
 ### Requirements
 
 - Mac running VMWare Fusion 
 - Packer installed
-- en_windows_10_business_editions_version_1909_x64_dvd_ada535d0.iso
+- en_windows_10_business_editions_version_1909_x64_dvd_ada535d0.iso` or compatible ISO >= version 1809.
+    - If using an iso other than the one listed above, you will be required to adjust the iso_name and iso_checksum values in the variables.json file. 
 
 ### Getting Started
 
