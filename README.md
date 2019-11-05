@@ -19,7 +19,14 @@ This repo currently tested to support the following Windows Editions:
 ### Getting Started
 
 1. Clone and change directory into this repo
+````bash
+git clone https://github.com/jamesmuldrow/Windows-10_Enterprise_Template_for_Packer.git
+cd Windows-10_Enterprise_Template_for_Packer.git
+````
 2. Copy .variables.example.json to variables.json
+````bash
+cp .variables.example.json variables.json
+````
 3. Modify lines 88, 89 & 109, 110 in the autounnattend.xml file.
     - 88, 89 & 109,110 both look like this:  
 ````xml
